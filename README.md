@@ -1,24 +1,32 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# アプリケーション名
+  ScheDiray-app
 
-Things you may want to cover:
+# アプリ-ケーション概要
+  カレンダーで日々のスケジュール管理ができ、日記も付けられるアプリ。
 
-* Ruby version
+# URL
+  https://schediary-app.onrender.com
 
-* System dependencies
+# テスト用アカウント
 
-* Configuration
+# 利用方法
 
-* Database creation
+# アプリケーションを作成した背景
 
-* Database initialization
+# 洗い出した要件
 
-* How to run the test suite
+# 実装した機能についての画像やGIFおよびその説明
 
-* Services (job queues, cache servers, search engines, etc.)
+# 実装予定の機能
 
-* Deployment instructions
+# データベース設計
 
-* ...
+# 画面遷移図
+
+# 開発環境
+
+# ローカルでの動作方法
+
+# 工夫したポイント
