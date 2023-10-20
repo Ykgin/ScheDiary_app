@@ -35,3 +35,44 @@
 
 
 # 工夫したポイント
+
+
+# テーブル設計
+
+## users テーブル
+
+| Column   | Type   | Options     |
+| -------- | ------ | ----------- |
+| nickname | string | null: false |
+| email    | string | null: false |
+| password | string | null: false |
+| birthday | string | null: false |
+
+### Association
+- has_many :schedules
+- has_many :diaries
+
+## schedules テーブル
+| Column  | Type       | Options                        |
+| ------- | ---------- | ------------------------------ |
+| title   | string     | null: false                    |
+| time_id | integer    | null: false                    |
+| content | text       | null: false                    |
+| user    | references | null: false, foreign_key: true |
+| diary   | references |                                |
+
+### Association
+- belongs_to :user
+- has_one :diary
+
+
+## diaries テーブル
+| Column   | Type       | Options                        |
+| -------- | ---------- | ------------------------------ |
+| content  | text       | null: false                    |
+| user     | references | null: false, foreign_key: true |
+| schedule | references |                                |
+
+### Association
+- belongs_to :user
+- belongs_to :schedule
