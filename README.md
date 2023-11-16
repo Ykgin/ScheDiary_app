@@ -41,12 +41,12 @@
 
 ## users テーブル
 
-| Column   | Type   | Options     |
-| -------- | ------ | ----------- |
-| nickname | string | null: false |
-| email    | string | null: false |
-| password | string | null: false |
-| birthday | string | null: false |
+| Column   | Type    | Options     |
+| -------- | ------- | ----------- |
+| nickname | string  | null: false |
+| email    | string  | null: false |
+| password | string  | null: false |
+| birthday | date    | null: false |
 
 ### Association
 - has_many :schedules
