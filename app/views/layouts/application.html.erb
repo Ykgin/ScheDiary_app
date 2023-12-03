@@ -15,19 +15,17 @@
   </head>
 
   <body>
-    <header>
-      <div class="nav_bar">
-        <div class="logo">
-          ScheDiaryApp
-        </div>
-        <ul class="nav-right">
-          <% if user_signed_in? %>
-            <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
-          <% else %>
-            <li><%= link_to "ログイン", new_user_session_path, class: "login" %></li>
-            <li><%= link_to "新規登録", new_user_registration_path, class: "sign-up" %></li>
-          <% end %>
-        </ul>
+    <header class="header">
+      <div class="heading">
+        <h1 class="logo">ScheDiaryApp</h1>
+      </div>
+      <div class="grid-6">
+        <% if user_signed_in? %>
+          <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %>
+        <% else %>
+          <%= link_to "ログイン", new_user_session_path, class: "login" %>
+          <%= link_to "新規登録", new_user_registration_path, class: "sign-up" %>
+        <% end %>
       </div>
     </header>
     <%= yield %>
