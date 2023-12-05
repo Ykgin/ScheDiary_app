@@ -53,13 +53,13 @@
 - has_many :diaries
 
 ## schedules テーブル
-| Column  | Type       | Options                        |
-| ------- | ---------- | ------------------------------ |
-| title   | string     | null: false                    |
-| time_id | integer    | null: false                    |
-| content | text       | null: false                    |
-| user    | references | null: false, foreign_key: true |
-| diary   | references |                                |
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| title      | string     | null: false                    |
+| start_time | datetime   | null: false                    |
+| content    | text       |                                |
+| user       | references | null: false, foreign_key: true |
+| diary      | references |                                |
 
 ### Association
 - belongs_to :user
