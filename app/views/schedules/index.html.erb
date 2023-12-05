@@ -1,2 +1,17 @@
-<h1>Schedules#index</h1>
+<div class="main">
+<%# ユーザーがログインしていないとカレンダーが表示されない%>
+  <% if user_signed_in? %>
+    <%= month_calendar do |date| %>
+      <%= date.day %>
+    <% end %>
+  <% else %>
+    ログインして<%= link_to "はじめる", new_user_session_path, class: :greeting__link %>
+  <% end %>
+
+  <div class="row">
+    <div class="col-md-4">
+      <div class="schedule">今月の予定</div>
+    </div>
+  </div>
+</div>
 
