@@ -1,22 +1,36 @@
-<%= form_with model: @schedule, local: true do |form| %>
+<%= form_with model: @schedule, class: 'form-schedule', local: true do |f| %>
+<div class='form-wrap__schedule'>
+  <div class='form-header__schedule'>
+    <h1 class='form-header-text__schedule'>
+      スケジュール登録
+    </h1>
+  </div>
 
-      <div class="title">
-        <div class="form-tag">タイトル</div>
-        <%= form.text_field :title %>
-      </div>
+  <div class="form-group">
+    <div class="form-text__schedule">
+      <div class="form-tag">タイトル</div>
+      <%= f.text_field :title, class:"input-default" %>
+    </div>
 
-      <div class="time">
-        <div class="form-tag">時間</div>
-        <%= form.datetime_select :start_time %>
-      </div>
+    <div class="form-text__schedule">
+      <div class="form-tag">日時</div>
+      <%= raw sprintf(
+                f.datetime_select(
+                  :start_time,
+                  class:'select-start',
+                  id:"start-time",
+                  use_month_numbers: true,
+                  date_separator: '/')) %>
+    </div>
 
-      <div class="content">
-        <div class="form-tag">内容</div>
-        <%= form.text_area :content %>
-      </div>
+    <div class="form-text__schedule">
+      <div class="form-tag">内容</div>
+      <%= f.text_area :content, class:"input-textarea" %>
+    </div>
       
-      <div class="submit">
-        <%= form.submit "登録" %>
-      </div>
-
+    <div class="submit-btn">
+      <%= f.submit "登録", class:"submit-red-btn" %>
+    </div>
+  </div>
+</div>
 <% end %>

@@ -1,4 +1,4 @@
-<div class="main">
+<div class="schedule_main">
  <%# ユーザーがログインしていないとカレンダーが表示されない%>
   <% if user_signed_in? %>
     <%= link_to "予定を登録する", new_schedule_path %>
@@ -14,17 +14,30 @@
     
     <div class="row">
       <div class="col-md-4">
-        <div class="schedule">今月の予定</div>
-          <% @schedules.each do |schedule| %>
-            <%= schedule.title %>
-            <%= schedule.start_time.strftime("%m-%d") %>
-          <% end %>
+        <h2 class="schedule">今月の予定</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th class="title">タイトル</th>
+              <th class="start-time">日にち</th>
+            </tr>
+          </thead>
+
+          <tbody>
+            <% @schedules.each do |schedule| %>
+              <tr>
+                <td><%= schedule.title %></td>
+                <td><%= schedule.start_time.strftime("%m-%d") %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
       </div>
     </div>
   <% else %>
     <div class="row">
       <div class="col-md-4">
-        ログインして<%= link_to "はじめる", new_user_session_path, class: :greeting__link %>
+        <%= link_to "はじめる", new_user_session_path, class: :greeting__link %>
       </div>
     </div>
   <% end %>
