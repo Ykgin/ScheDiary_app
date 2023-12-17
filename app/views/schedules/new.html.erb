@@ -17,10 +17,12 @@
       <%= raw sprintf(
                 f.datetime_select(
                   :start_time,
-                  class:'select-start',
+                  class:'start-time',
                   id:"start-time",
                   use_month_numbers: true,
-                  date_separator: '/')) %>
+                  date_separator: '%s',
+                  datetime_separator: '%s'),
+                  "年", "月", "日") %>
     </div>
 
     <div class="form-text__schedule">

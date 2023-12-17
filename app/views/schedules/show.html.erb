@@ -1,0 +1,22 @@
+<div class="schedule-show">
+  <div class="schedule-show__header">
+    <h1>スケジュールの詳細</h1>
+  </div>
+
+  <div class="show-main">
+    <div class="show-info">
+      <strong>日時</strong>
+      <%= simple_format(@schedule.start_time.strftime("%m-%d %H:%M")) %>
+    </div>
+
+    <div class="show-info">
+      <strong>タイトル</strong>
+      <%=simple_format(@schedule.title) %>
+    </div>
+
+    <div class="show-info">
+      <strong>内容・詳細</strong>
+      <%= simple_format(@schedule.content) %>
+    </div>
+  </div>
+</div>

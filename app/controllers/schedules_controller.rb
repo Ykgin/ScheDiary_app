@@ -1,6 +1,6 @@
 class SchedulesController < ApplicationController
   def index
-    @schedules = Schedule.all
+    @schedules = Schedule.order(:start_time)
   end
 
   def new
@@ -14,6 +14,10 @@ class SchedulesController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @schedule = Schedule.find(params[:id])
   end
 
   private
