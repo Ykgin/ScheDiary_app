@@ -276,7 +276,7 @@
   font-size: 20px;
 }
 
-.back-btn {
+.button-container{
   position: fixed;
   bottom: 0;
   left: 50%;
@@ -285,16 +285,23 @@
   align-items: center;
   justify-content: center;
   width: 50%;
+  margin-top: 20px;
   padding: 10px; /* 適切なパディングを設定してください */
-  background-color: #fff; 
+  background-color: #fff;
 }
 
-.back-btn__color{
-  color:black ;
-  text-decoration: none;
-  font-size: 18px;
-  padding: 0 15px;
-  border: solid 1px black;
+.end-btn {
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid #007bff;
   border-radius: 5px;
-  background-color: #f5f5f5 ;
+}
+
+.btn-back{
+  color: #007bff;
+  text-decoration: none;
+}
+
+.schedule-destroy{
+  text-decoration: none;
 }
