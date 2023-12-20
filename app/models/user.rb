@@ -8,4 +8,5 @@ class User < ApplicationRecord
   validates :birthday, presence: true
 
   has_many :schedules
+  has_many :diaries
 end

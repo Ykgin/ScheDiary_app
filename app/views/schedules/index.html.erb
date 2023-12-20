@@ -1,7 +1,8 @@
 <div class="schedule_main">
  <%# ユーザーがログインしていないとカレンダーが表示されない%>
   <% if user_signed_in? %>
-    <%= link_to "予定を登録する", new_schedule_path %>
+    <%= link_to "予定を登録する", new_schedule_path, class:"input-schedule-btn" %>
+    <%= link_to "日記", diaries_path, class:"input-schedule-btn" %>
 
     <%= month_calendar events: @schedules do |date, schedules| %>
       <%= date.day %>
@@ -12,9 +13,9 @@
       <% end %>
     <% end %>
     
-    <div class="row">
+    <div class="schedule-wrap">
       <div class="col-md-4">
-        <h2 class="schedule">今月の予定</h2>
+        <h2 class="schedule-heading">これからの予定</h2>
         <table class="table">
           <thead>
             <tr>
