@@ -11,7 +11,6 @@ class DiariesController < ApplicationController
       redirect_to diaries_path
     else
       @diaries = Diary.all
-      binding.pry
       render :index
     end
   end
