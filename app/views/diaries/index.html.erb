@@ -4,7 +4,7 @@
   <% @diaries.each do |diary| %>
     <li>
       <%= diary.content %>
-      <p>投稿日: <%= diary.created_at.strftime("%Y-%m-%d %H:%M:%S") %></p>
+      <p>投稿日: <%= diary.created_at.strftime("%Y-%m-%d %H:%M") %></p>
     </li>
   <% end %>
 </ul>
