@@ -306,3 +306,25 @@
 .schedule-destroy{
   text-decoration: none;
 }
+
+/* 日記ページ */
+.diaries-main{
+  width: 100%;
+  min-width: 800px;
+  height: 100%;
+  margin: 30px auto 20px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+}
+
+.diary-contents{
+  width: 60%;
+  height: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.diary-form__heading{
+  
+}
