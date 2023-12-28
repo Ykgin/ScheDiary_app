@@ -326,5 +326,6 @@
 }
 
 .diary-form__heading{
-  
+  margin-top: 10px;
+  border-bottom: 1px solid;
 }
