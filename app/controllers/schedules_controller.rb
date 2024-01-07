@@ -1,6 +1,7 @@
 class SchedulesController < ApplicationController
   def index
     @schedules = Schedule.order(:start_time)
+    @current_month_schedules = filter_schedules_by_month(@schedules, Date.today.month)
   end
 
   def new
@@ -41,6 +42,10 @@ class SchedulesController < ApplicationController
   end
 
   private
+
+  def filter_schedules_by_month(schedules, month)
+    schedules.select { |schedule| schedule.start_time.month == month }
+  end
 
   def schedule_params
     params.require(:schedule).permit(:title, :start_time, :content).merge(user_id: current_user.id)
