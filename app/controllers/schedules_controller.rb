@@ -18,6 +18,7 @@ class SchedulesController < ApplicationController
 
   def show
     @schedule = Schedule.find(params[:id])
+    @diaries = Diary.where(user_id: current_user.id, created_at: @schedule.start_time.beginning_of_day..@schedule.start_time.end_of_day)
   end
 
   def edit

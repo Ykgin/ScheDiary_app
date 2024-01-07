@@ -25,6 +25,17 @@
           <%= simple_format(@schedule.content) %>
         </div>
       </div>
+
+      <div class="diaries-headding">日記・記録</div>
+      <% if @diaries.present? %>
+        <ul>
+          <% @diaries.each do |diary| %>
+            <li><%= diary.content %></li>
+          <% end %>
+        </ul>
+      <% else %>
+        <div>日記・記録はありません。</div>
+      <% end %>
     </div>
   </div>
   <div class="button-container">
