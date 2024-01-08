@@ -11,10 +11,10 @@
   https://schediary-app.onrender.com
 
 # テスト用アカウント
-  ・Basic認証ID：admin  
-  ・Basic認証パスワード：2222  
-  ・メールアドレス：test@test.com  
-  ・パスワード：11111a  
+- Basic認証ID：admin  
+- Basic認証パスワード：2222  
+- メールアドレス：test@test.com  
+- パスワード：11111a  
 
 # 利用方法
   1. トップページ（一覧ページ）のヘッダーからユーザー新規登録を行う
@@ -33,8 +33,8 @@
 # 実装した機能についての画像やGIFおよびその説明
 
 # 実装予定の機能
-  ・画像投稿機能  
-  ・マイページ
+- 画像投稿機能  
+- マイページ
 
 
 # データベース設計
@@ -72,7 +72,7 @@
 | -------- | ---------- | ------------------------------ |
 | content  | text       | null: false                    |
 | user     | references | null: false, foreign_key: true |
-| schedule | references |                                |
+| schedule | references | foreign_key: true              |
 
 ### Association
 - belongs_to :user
@@ -82,13 +82,18 @@
   ![](schediary-page.dio.png)
 
 # 開発環境
+- ruby '2.6.5'
+- rails (6.0.6.1)
+- mysql2 (0.5.5)
+
 
 # ローカルでの動作方法
 以下のコマンドを順に実行。
 
 
 # 工夫したポイント
-・一覧ページで、月単位の予定を確認できるようにしています。  
+- 一覧ページで、月単位の予定を確認できるようにしています。  
+- スケジュールを登録するときは、詳細な内容が決まっていなくてもタイトルだけで登録できます。編集ページでいつでも修正することができます。  
 
 
 
