@@ -6,7 +6,7 @@
     <div class="diary-form">
       <%= form_with model: @diary, local: true do |form| %>
         <div class="diary-form__content">
-          <%= form.text_area :content, placeholder: "今日の日記を書いてね！" %>
+          <%= form.text_area :content, class:"input-diary", placeholder: "今日の日記を書いてね！" %>
         </div>
         <div class="diary-form__submit">
           <%= form.submit "投稿" %>

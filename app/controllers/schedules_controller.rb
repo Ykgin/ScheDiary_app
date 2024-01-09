@@ -1,4 +1,6 @@
 class SchedulesController < ApplicationController
+  before_action :authenticate_user!, only: [:new, :create, :show, :edit, :destroy]
+  
   def index
     @schedules = Schedule.order(:start_time)
     @current_month_schedules = filter_schedules_by_month(@schedules, Date.today.month)
@@ -50,4 +52,5 @@ class SchedulesController < ApplicationController
   def schedule_params
     params.require(:schedule).permit(:title, :start_time, :content).merge(user_id: current_user.id)
   end
+
 end
