@@ -39,6 +39,26 @@
   font-size: 14px;
 }
 
+/* トップページ */
+.service-title{
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.service-explain{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.service-item{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
 
 /* ユーザー新規登録画面 */
 .registration-main{
@@ -175,10 +195,6 @@
   font-size: 14px;
   cursor: pointer;
 }
-
-/* index画面 */
-
-
 
 /* スケジュール投稿画面 */
 .schedule-main{
