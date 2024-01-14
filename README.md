@@ -17,7 +17,7 @@
 - パスワード：11111a  
 
 # 利用方法
-  1. トップページ（一覧ページ）のヘッダーからユーザー新規登録を行う
+  1. トップページ（一覧ページ）のヘッダーからユーザー新規登録を行い、ログインする
   2. 予定を登録するボタンから、新規投稿ページで予定（日時、タイトル、内容）を登録する
   3. 日記ボタンから、日記の投稿をする
 
@@ -31,6 +31,11 @@
   https://docs.google.com/spreadsheets/d/1R0nv1IZTiQ54EIx7lzDTDFB0YB93P646bj3pV2gZaGs/edit?usp=sharing
 
 # 実装した機能についての画像やGIFおよびその説明
+  1. トップページでは、アプリケーションの説明をしています。  
+  [![Image from Gyazo](https://i.gyazo.com/f30ed525256763e3f3d6f9b1ef1f6e33.png)](https://gyazo.com/f30ed525256763e3f3d6f9b1ef1f6e33)
+  2. 新規登録ボタンから、ユーザー新規登録ページに進み、必要な個所を入力して新規登録を行ってください。  
+  [![Image from Gyazo](https://i.gyazo.com/a53c910eb03529c048c6f38046183b61.png)](https://gyazo.com/a53c910eb03529c048c6f38046183b61)
+  3.
 
 # 実装予定の機能
 - 画像投稿機能  

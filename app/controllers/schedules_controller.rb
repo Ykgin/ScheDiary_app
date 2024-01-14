@@ -2,8 +2,13 @@ class SchedulesController < ApplicationController
   before_action :authenticate_user!, only: [:new, :create, :show, :edit, :destroy]
   
   def index
-    @schedules = Schedule.order(:start_time)
-    @current_month_schedules = filter_schedules_by_month(@schedules, Date.today.month)
+    if user_signed_in?
+      @schedules = current_user.schedules.order(:start_time)
+      @current_month_schedules = filter_schedules_by_month(@schedules, Date.today.month)
+    else
+      @schedules = []  
+      @current_month_schedules = []
+    end
   end
 
   def new
@@ -44,6 +49,10 @@ class SchedulesController < ApplicationController
   end
 
   private
+
+  def user_signed_in?
+    current_user.present?
+  end
 
   def filter_schedules_by_month(schedules, month)
     schedules.select { |schedule| schedule.start_time.month == month }
