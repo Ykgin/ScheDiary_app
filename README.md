@@ -34,8 +34,15 @@
   1. トップページでは、アプリケーションの説明をしています。  
   [![Image from Gyazo](https://i.gyazo.com/f30ed525256763e3f3d6f9b1ef1f6e33.png)](https://gyazo.com/f30ed525256763e3f3d6f9b1ef1f6e33)
   2. 新規登録ボタンから、ユーザー新規登録ページに進み、必要な個所を入力して新規登録を行ってください。  
-  [![Image from Gyazo](https://i.gyazo.com/a53c910eb03529c048c6f38046183b61.png)](https://gyazo.com/a53c910eb03529c048c6f38046183b61)
-  3.
+  [![Image from Gyazo](https://i.gyazo.com/a53c910eb03529c048c6f38046183b61.png)](https://gyazo.com/a53c910eb03529c048c6f38046183b61)  
+  次回以降はログインボタンからログインして使用してください。  
+  [![Image from Gyazo](https://i.gyazo.com/29db0903ceebacf525bfe4c5ccb0888e.png)](https://gyazo.com/29db0903ceebacf525bfe4c5ccb0888e)
+  3. 予定登録ボタンから、予定の入力ができます。  
+  [![Image from Gyazo](https://i.gyazo.com/1ef61d8f174c5efb60f2d0374788e671.png)](https://gyazo.com/1ef61d8f174c5efb60f2d0374788e671)
+  4. 日記ボタンから日記の入力ができます。投稿した日記も見ることができます。  
+  [![Image from Gyazo](https://i.gyazo.com/fcf81809f7534ecacf5dc3a2779b9d3c.png)](https://gyazo.com/fcf81809f7534ecacf5dc3a2779b9d3c)
+  5. 登録した予定の詳細を見るときは、カレンダーから確認することができ、編集と削除ができます。  
+     詳細ページでは、日記を見ることもできます。
 
 # 実装予定の機能
 - 画像投稿機能  
@@ -97,8 +104,7 @@
 
 
 # 工夫したポイント
-- 一覧ページで、月単位の予定を確認できるようにしています。  
-- スケジュールを登録するときは、詳細な内容が決まっていなくてもタイトルだけで登録できます。編集ページでいつでも修正することができます。  
+- シンプルなアプリケーションにしたかったので、使い方は見ただけでわかるようにしました。
 
 
 
