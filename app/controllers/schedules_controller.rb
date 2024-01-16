@@ -6,7 +6,7 @@ class SchedulesController < ApplicationController
       @schedules = current_user.schedules.order(:start_time)
       @current_month_schedules = filter_schedules_by_month(@schedules, Date.today.month)
     else
-      @schedules = []  
+      @schedules = []
       @current_month_schedules = []
     end
   end
@@ -26,7 +26,11 @@ class SchedulesController < ApplicationController
 
   def show
     @schedule = Schedule.find(params[:id])
-    @diaries = Diary.where(user_id: current_user.id, created_at: @schedule.start_time.beginning_of_day..@schedule.start_time.end_of_day)
+    if current_user && @schedule.user == current_user
+      @diaries = Diary.where(user_id: current_user.id, created_at: @schedule.start_time.beginning_of_day..@schedule.start_time.end_of_day)
+    else
+      redirect_to root_path
+    end
   end
 
   def edit
