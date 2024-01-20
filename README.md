@@ -94,10 +94,12 @@
   ![](schediary-page.dio.png)
 
 # 開発環境
-- ruby '2.6.5'
-- rails (6.0.6.1)
-- mysql2 (0.5.5)
-- Visual Studio Code
+| カテゴリー     | 技術                   |
+| --------------| -----------------------|
+| フロントエンド |  CSS                   |
+| バックエンド   | Ruby 2.6.5 Rails 6.0.0 |
+| データベース   | PostgreSQL             |
+| インフラ       | render                 |
 
 
 # ローカルでの動作方法
