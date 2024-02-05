@@ -45,8 +45,9 @@
      [![Image from Gyazo](https://i.gyazo.com/ec08badbe3a024827bd2391fa6a613bc.png)](https://gyazo.com/ec08badbe3a024827bd2391fa6a613bc)
 
 # 実装予定の機能
-- 画像投稿機能  
+- 画像投稿機能（アルバム作成機能） 
 - マイページ
+
 
 
 # データベース設計
