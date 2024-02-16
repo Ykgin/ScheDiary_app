@@ -19,7 +19,8 @@ RSpec.describe User, type: :model do
         
       end
       it 'emailが空では登録できない' do
-        
+        @user.email = ''
+        @user.valid?
       end
       it 'passwordが空では登録できない' do
         
