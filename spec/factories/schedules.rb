@@ -3,6 +3,6 @@ FactoryBot.define do
     title {Faker::Lorem.word}
     start_time {Faker::Time.between_dates(from: Date.today - 1, to: Date.today, period: :all)}
     content {Faker::Lorem.sentence}
-    assosiation :user
+    association :user
   end
 end
