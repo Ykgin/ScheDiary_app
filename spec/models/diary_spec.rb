@@ -13,13 +13,14 @@ RSpec.describe Diary, type: :model do
     end
     context '日記を登録できない' do
       it '日記が存在しなければ登録できない' do
-        
+        @diary.content = ''
+        @diary.valid?
+        expect(@diary.errors.full_messages).to include("Content can't be blank")
       end
       it 'ユーザーが紐付いていなければ登録できない' do
-        
-      end
-      it 'スケジュールが紐づいていなければ登録できない' do
-        
+        @diary.user = nil
+        @diary.valid?
+        expect(@diary.errors.full_messages).to include("User must exist")
       end
     end
   end
