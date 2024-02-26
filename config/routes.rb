@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   root to: "schedules#index"
   resources :schedules
   resources :diaries, only:[:index, :create, :destroy]
+  resources :users, only: :show
 end
