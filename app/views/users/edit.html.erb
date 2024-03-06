@@ -6,9 +6,6 @@
       アカウントの編集
     </h5>
   </div>
-
-  <%#= render "devise/shared/error_messages", resource: resource %>
-
   <div class="form-group">
     <div class='form-text-wrap'>
       <label class="form-text">ニックネーム</label>
@@ -25,7 +22,17 @@
   </div>
 
   <div class='register-btn'>
-    <%= f.submit "登録する" ,class:"register-red-btn" %>
+    <%= f.submit "更新する" ,class:"register-red-btn" %>
   </div>
+  <% if @errors %>
+  <div class="alert alert-danger">
+    <ul>
+      <% @errors.each do |error| %>
+        <li><%= error %></li>
+      <% end %>
+    </ul>
+  </div>
+  <% end %>
+
 </div>
 <% end %>
