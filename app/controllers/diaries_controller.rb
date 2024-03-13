@@ -1,4 +1,6 @@
 class DiariesController < ApplicationController
+  before_action :authenticate_user!, only:[:index, :create, :destroy]
+
   def index
     @diaries = current_user.diaries
     @diary = Diary.new
