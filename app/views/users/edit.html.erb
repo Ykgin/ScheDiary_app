@@ -1,15 +1,19 @@
-<h2>Edit Acount</h2>
-<h5>アカウントの編集</h5>
-<%= form_with model: current_user, local: true do |f| %>
-  <div>
-    <%= f.label :nickname %><br>
-    <%= f.text_field :nickname %>
+<div class="acount-main">
+  <div class="acount-header">
+    <h2 class="acount-header__title">Edit Acount</h2>
+    <h5 class="acount-header__text">アカウントの編集</h5>
   </div>
-  <div>
-    <%= f.label :email %><br>
-    <%= f.email_field :email %>
-  </div>
-  <div>
-    <%= f.submit "更新" %>
-  </div>
-<% end %>
+  <%= form_with model: current_user, local: true do |f| %>
+    <div>
+      <%= f.label :nickname %><br>
+      <%= f.text_field :nickname %>
+    </div>
+    <div>
+      <%= f.label :email %><br>
+      <%= f.email_field :email %>
+    </div>
+    <div>
+      <%= f.submit "更新" %>
+    </div>
+ <% end %>
+</div>

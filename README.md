@@ -1,7 +1,7 @@
 # README
 
 # アプリケーション名
-  ScheDiray-app
+  ScheDiary-app
 
 # アプリケーション概要
   カレンダーで日々のスケジュールを管理することができます。  
