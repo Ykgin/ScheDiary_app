@@ -26,16 +26,21 @@
         </div>
       </div>
 
-      <div class="diaries-headding">日記・記録</div>
-      <% if @diaries.present? %>
-        <ul>
-          <% @diaries.each do |diary| %>
-            <li><%= diary.content %></li>
+      <div class="show-info">
+        <div class="show-text">日記・記録</div>
+        <div class="default-text">
+          <% if @diaries.present? %>
+            <ul class="lists">
+              <% @diaries.each do |diary| %>
+                <li class="list"><%= diary.content %></li>
+              <% end %>
+            </ul>
+          <% else %>
+            <div class="list">日記・記録はありません。</div>
           <% end %>
-        </ul>
-      <% else %>
-        <div>日記・記録はありません。</div>
-      <% end %>
+        </div>
+      </div>
+      
     </div>
   </div>
   <div class="button-container">

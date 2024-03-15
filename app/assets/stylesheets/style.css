@@ -26,7 +26,8 @@
 
 .login,
 .sign-up,
-.logout{
+.logout,
+.acount{
   margin-left: 15px;
   padding: 6px;
   border-radius: 5px;
@@ -319,13 +320,19 @@
 }
 
 .show-text{
-  font-size: 23px;
+  font-size: 20px;
   font-weight: bold;
   border-bottom: solid 1px ;
 }
 
 .default-text{
-  font-size: 20px;
+  font-size: 18px;
+}
+
+.list{
+  list-style: none;
+  font-size: 15px;
+  margin-top: 5px;
 }
 
 .button-container{
